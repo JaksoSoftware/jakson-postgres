@@ -1,0 +1,39 @@
+{
+  "name": "jakson-postgres",
+  "version": "0.1.1",
+  "description": "postgres service for jakson",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --timeout 600000 -r ts-node/register tests/**/*-test.ts",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc",
+    "prepare": "npm run build",
+    "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'"
+  },
+  "author": "Jakso Software Oy",
+  "license": "MIT",
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/koa-router": "^7.0.42",
+    "@types/mocha": "^5.2.7",
+    "@types/pg": "^7.14.0",
+    "chai": "^4.2.0",
+    "jakson": "*",
+    "knex": "^0.20.4",
+    "mocha": "^6.2.2",
+    "pg": "^7.16.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "knex": "0.x",
+    "pg": "7.x",
+    "objection": "2.x",
+    "jakson": "0.x"
+  },
+  "dependencies": {}
+}
